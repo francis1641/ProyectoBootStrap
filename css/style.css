@@ -52,10 +52,14 @@
     border-color: var(--white); 
   }
   
+
+
   /* HERO SECTION  */
   .hero {
     background-attachment: fixed;
+      background-image: url("../img/cappadocia.jpg");
     transition: transform 0.5s ease-in-out;
+
   }
   
   .hero::after {
@@ -77,17 +81,59 @@
   }
   
   /* POPULAR DESTINATIONS SECTION  */
+
   .popular-destinations figure {
     margin-bottom: 30px;
+}
+  /* NO HEMOS CONSEGUIDO QUE NOS FUNCIONE A LA VEZ EL BLUR Y QUE EL TEXTO SE VIERA POR ENCIMA DE LA IMAGEN */
+  .image-text:hover{
+    opacity: 1;
+    -webkit-filter: blur(0px) grayscale(0);
   }
-  
- 
+
+.image-text{
+
+    position: absolute;
+    opacity: 0;
+
+    transform-origin: top;
+    transition: opacity 1s ease-in-out;
+
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+  }
+
+
   
   /* PAGE FOOTER
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   .page-footer .footer-links {
     text-align: right;
   }
+  .footer-social-media .social-media {
+      display: flex;
+      width: 200px;
+      justify-content: space-between;
+      font-size: 1.8rem;
+      margin-bottom: 40px; 
+    }
+.footer-social-media .social-media-item {
+        list-style: none; }
+.footer-social-media .social-media-link {
+        text-decoration: none;
+        font-style: 1.2rem;
+        color: rgb(136, 136, 136);
+        transition: color .6s; }
+.footer-social-media .social-media-link:hover {
+          color: #ff0000; }
+
   
   /* MEDIA QUERIES
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
